@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: pyapp
+  template:
+    metadata:
+      labels:
+        name: pyapp
+    spec:
+      containers:
+      - name: pyapp
+        image: europe-west1-docker.pkg.dev/pythonapp-project/myrepo/pyapp:1
+        ports:
+        - containerPort: 8000
+        env:
+          - name: ENVIRONMENT
+            value: "DEV"
+          - name: HOST
+            value: "localhost"
+          - name: PORT
+            value: "8000"
+          - name: REDIS_HOST
+            value: "redis-service"
+          - name: REDIS_PORT
+            value: "6379"
+          - name: REDIS_DB
+            value: "0"

@@ -1,11 +1,11 @@
 #project _ vars : ---------------------------
 variable "project_id" {
-  type = string  
+  type = string
 }
 
 #network _ vars : ----------------------------------------
 variable "vpc_name" {
-  type = string  
+  type = string
 }
 variable "region" {
   type = string

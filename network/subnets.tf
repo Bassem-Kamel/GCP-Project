@@ -6,8 +6,8 @@ resource "google_compute_subnetwork" "mangement-sub" {
 }
 
 
-resource "google_compute_subnetwork" "restreicted-sub" {
-  name          = "restreicted-sub"
+resource "google_compute_subnetwork" "restricted-sub" {
+  name          = "restricted-sub"
   ip_cidr_range = var.net_restricted_cidr
   region        = var.net_region
   network       = google_compute_network.myvpc.id
