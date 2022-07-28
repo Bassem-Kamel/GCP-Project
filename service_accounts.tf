@@ -13,7 +13,7 @@ resource "google_project_iam_binding" "bastion_iam_role" {
 #-----------------------------------------------------------------
 
 resource "google_service_account" "gke-node-sa" {
-  account_id   = "gke-node-sa"
+  account_id = "gke-node-sa"
 }
 
 resource "google_project_iam_member" "gke_role1" {
