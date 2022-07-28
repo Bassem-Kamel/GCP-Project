@@ -31,7 +31,7 @@ Notes:
 
 ## Project diagram :
 
-![gcp.drawio.png](images/gcp.drawio.png)
+![project.png](images/project.png)
 
 ## Steps :
 
@@ -42,8 +42,10 @@ docker build . -t myapp:1
 docker tag myapp:1 europe-west1-docker.pkg.dev/project-id/myrepo/app
 docker push europe-west1-docker.pkg.dev/project-id/myrepo/app
 ```
+<p align="center">
+  <img src="images/repo.png" width="500" height="230" title="hover text">
+</p>
 
-![Untitled](images/Untitled.png)
 
 ### 2. Create the infrastructure using Terraform
 
@@ -80,10 +82,12 @@ gcloud container clusters get-credentials cluster-name \
 
 ### 4. Create deployments and services using kubectl :
 
-![gcp.drawio(1).png](images/gcp.drawio(1).png)
+![k8s.png](images/k8s.png)
 
 ### 5. Run the app using loadbalancer ip
 
-![Untitled](images/Untitled%201.png)
+![loadbalancer](images/loadbalancer.png)
 
-![Untitled](images/Untitled%202.png)
+<p align="center">
+  <img src="images/app.png" width="500" height="230" title="hover text">
+</p>
